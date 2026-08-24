@@ -6,12 +6,60 @@ window.PRODUCT_CATALOG = [
     "lane": "AI agent governance",
     "motif": "control",
     "fields": [
-      "Agent action",
+      "Registered agent",
+      "Accountable owner",
+      "Risk tier",
       "Allowed tool scope",
-      "Human approval evidence"
+      "Approval evidence"
     ],
     "status": "Private flagship build",
-    "featured": true
+    "featured": true,
+    "pitch": "Local-first AI-agent change control for named owners, declared tool scope, risk-aware decisions, approval evidence, and auditability.",
+    "buyer": "Engineering or security leader",
+    "outcome": "Accountable agent-action control",
+    "recordLabel": "agent action request",
+    "sourceLabel": "agent registry, policy, or synthetic event reference",
+    "resolveLabel": "record controlled outcome",
+    "resolutionFields": [
+      "Approval evidence"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "agent action request registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "agent registry, policy, or synthetic event reference"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "record controlled outcome"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Approval evidence"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
+    ]
   },
   {
     "id": "p01",
@@ -34,6 +82,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "record access decision",
     "resolutionFields": [
       "Access reference"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "access-review exception registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "access or approval fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "record access decision"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Access reference"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -57,6 +142,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "confirm approval",
     "resolutionFields": [
       "Client stage"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "client approval handoff registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "brief, feedback, or asset fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "confirm approval"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Client stage"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -80,6 +202,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "close dispute",
     "resolutionFields": [
       "Fictional invoice reference"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "receivables dispute registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "fictional invoice or payment fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "close dispute"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Fictional invoice reference"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -103,6 +262,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "close remediation",
     "resolutionFields": [
       "Control-test reference"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "audit remediation registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "control-test or evidence fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "close remediation"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Control-test reference"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -126,6 +322,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "close authorization case",
     "resolutionFields": [
       "Fictional case reference"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "authorization evidence case registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "fictional authorization fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "close authorization case"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Fictional case reference"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -149,6 +382,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "accept bid review",
     "resolutionFields": [
       "Trade package"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "bid-scope variance registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "bid or scope-checklist fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "accept bid review"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Trade package"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -172,6 +442,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "approve brief",
     "resolutionFields": [
       "Brief objective"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "creative delivery brief registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "call, asset, or feedback fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "approve brief"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Brief objective"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -195,6 +502,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "close staffing exception",
     "resolutionFields": [
       "Fictional roster reference"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "fictional staffing exception registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "fictional credential or schedule fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "close staffing exception"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Fictional roster reference"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -218,6 +562,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "approve catalog change",
     "resolutionFields": [
       "Catalog reference"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "catalog-change review registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "supplier, listing, or feed fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "approve catalog change"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Catalog reference"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -241,6 +622,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "approve change order",
     "resolutionFields": [
       "Project change reference"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "change-order record registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "field-change or photo fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "approve change order"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Project change reference"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -264,6 +682,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "approve brief",
     "resolutionFields": [
       "Change reference"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "implementation brief registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "ticket, document, or decision fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "approve brief"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Change reference"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -287,6 +742,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "close claim review",
     "resolutionFields": [
       "Fictional claim reference"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "claim-completeness review registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "fictional claim fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "close claim review"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Fictional claim reference"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -310,6 +802,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "confirm activation",
     "resolutionFields": [
       "Engagement reference"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "client-activation record registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "onboarding or document fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "confirm activation"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Engagement reference"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -333,6 +862,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "approve narrative",
     "resolutionFields": [
       "Fictional close period"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "fictional close narrative registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "fictional reconciliation or variance fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "approve narrative"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Fictional close period"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -356,6 +922,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "confirm contract action",
     "resolutionFields": [
       "Contract reference"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "contract action registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "contract or notice fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "confirm contract action"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Contract reference"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -379,6 +982,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "confirm migration",
     "resolutionFields": [
       "Contract surface"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "contract migration record registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "API contract or consumer fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "confirm migration"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Contract surface"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -402,6 +1042,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "approve brief",
     "resolutionFields": [
       "Import run"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "implementation brief registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "ticket, document, or decision fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "approve brief"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Import run"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -425,6 +1102,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "confirm review",
     "resolutionFields": [
       "Document reference"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "document-change review registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "version or source-document fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "confirm review"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Document reference"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -448,6 +1162,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "accept evidence",
     "resolutionFields": [
       "Control reference"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "audit evidence packet registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "control, system, or owner fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "accept evidence"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Control reference"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -471,6 +1222,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "confirm maintenance outcome",
     "resolutionFields": [
       "Site reference"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "facility maintenance loop registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "inspection or work-order fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "confirm maintenance outcome"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Site reference"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -494,6 +1282,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "confirm invoice readiness",
     "resolutionFields": [
       "Work reference"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "invoiceable closeout registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "work, photo, or approval fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "confirm invoice readiness"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Work reference"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -517,6 +1342,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "close obligation",
     "resolutionFields": [
       "Grant reference"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "grant obligation registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "grant or reporting fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "close obligation"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Grant reference"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -540,6 +1402,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "accept handoff",
     "resolutionFields": [
       "Promise reference"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "sales-to-success handoff registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "sales promise or scope fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "accept handoff"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Promise reference"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -563,6 +1462,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "record hiring decision",
     "resolutionFields": [
       "Fictional candidate reference"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "fictional interview evidence pack registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "fictional interview fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "record hiring decision"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Fictional candidate reference"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -586,6 +1522,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "close learning item",
     "resolutionFields": [
       "Incident window"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "incident learning brief registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "alert, deploy, or owner-note fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "close learning item"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Incident window"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -609,6 +1582,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "close intake step",
     "resolutionFields": [
       "Fictional matter reference"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "intake workflow registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "fictional matter-intake fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "close intake step"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Fictional matter reference"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -632,6 +1642,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "close invoice review",
     "resolutionFields": [
       "Fictional invoice reference"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "fictional invoice exception registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "fictional PO or receiving fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "close invoice review"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Fictional invoice reference"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -655,6 +1702,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "confirm freshness",
     "resolutionFields": [
       "Knowledge reference"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "knowledge-freshness review registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "knowledge-base or source fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "confirm freshness"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Knowledge reference"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -678,6 +1762,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "close sample exception",
     "resolutionFields": [
       "Fictional sample reference"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "fictional sample exception registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "fictional sample or custody fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "close sample exception"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Fictional sample reference"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -701,6 +1822,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "verify closeout",
     "resolutionFields": [
       "Property reference"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "maintenance closeout registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "tenant request or vendor fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "verify closeout"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Property reference"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -724,6 +1882,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "confirm closeout",
     "resolutionFields": [
       "Fictional matter reference"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "matter-closeout record registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "fictional matter fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "confirm closeout"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Fictional matter reference"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -747,6 +1942,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "confirm offer step",
     "resolutionFields": [
       "Fictional candidate reference"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "fictional offer workflow registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "fictional interview or offer fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "confirm offer step"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Fictional candidate reference"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -770,6 +2002,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "close permit item",
     "resolutionFields": [
       "Permit reference"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "permit-readiness item registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "permit or inspection fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "close permit item"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Permit reference"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -793,6 +2062,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "confirm control outcome",
     "resolutionFields": [
       "Policy reference"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "policy-control task registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "policy or evidence fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "confirm control outcome"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Policy reference"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -816,6 +2122,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "record policy decision",
     "resolutionFields": [
       "Policy reference"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "AI policy test result registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "redacted policy-test fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "record policy decision"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Policy reference"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -839,6 +2182,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "approve brief",
     "resolutionFields": [
       "Job reference"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "implementation brief registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "ticket, document, or decision fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "approve brief"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Job reference"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -862,6 +2242,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "qualify quote",
     "resolutionFields": [
       "Request reference"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "technical quote request registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "requirement or request fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "qualify quote"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Request reference"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -885,6 +2302,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "close reconciliation",
     "resolutionFields": [
       "Fictional ledger reference"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "reconciliation exception registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "fictional ledger or statement fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "close reconciliation"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Fictional ledger reference"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -908,6 +2362,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "confirm intervention",
     "resolutionFields": [
       "Risk signal"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "renewal-risk brief registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "usage, ticket, or account-note fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "confirm intervention"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Risk signal"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -931,6 +2422,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "confirm return action",
     "resolutionFields": [
       "Return reference"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "return-cause review registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "return or fulfillment fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "confirm return action"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Return reference"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -954,6 +2482,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "resolve shipment exception",
     "resolutionFields": [
       "Shipment reference"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "shipment exception registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "shipment or carrier fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "resolve shipment exception"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Shipment reference"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -977,6 +2542,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "confirm runbook outcome",
     "resolutionFields": [
       "Runbook reference"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "runbook execution record registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "incident or runbook fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "confirm runbook outcome"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Runbook reference"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -1000,6 +2602,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "close corrective action",
     "resolutionFields": [
       "Site incident reference"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "safety corrective-action record registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "site report or photo fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "close corrective action"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Site incident reference"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -1023,6 +2662,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "close referral step",
     "resolutionFields": [
       "Fictional referral reference"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "fictional service-referral workflow registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "fictional referral or document fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "close referral step"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Fictional referral reference"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -1046,6 +2722,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "confirm scope",
     "resolutionFields": [
       "Scope reference"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "delivery scope record registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "sales promise or SOW fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "confirm scope"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Scope reference"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -1069,6 +2782,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "approve brief",
     "resolutionFields": [
       "Decision scope"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "implementation brief registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "ticket, document, or decision fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "approve brief"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Decision scope"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -1092,6 +2842,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "reconcile inventory",
     "resolutionFields": [
       "Item reference"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "inventory reconciliation registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "count, order, or sales fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "reconcile inventory"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Item reference"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -1115,6 +2902,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "approve supplier",
     "resolutionFields": [
       "Supplier reference"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "supplier qualification registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "requirement or capacity fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "approve supplier"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Supplier reference"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -1138,6 +2962,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "approve brief",
     "resolutionFields": [
       "Escalation channel"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "implementation brief registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "ticket, document, or decision fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "approve brief"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Escalation channel"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   },
   {
@@ -1161,6 +3022,43 @@ window.PRODUCT_CATALOG = [
     "resolveLabel": "verify vendor",
     "resolutionFields": [
       "Vendor reference"
+    ],
+    "stateFlow": [
+      {
+        "value": "open",
+        "label": "Open",
+        "meaning": "vendor-readiness record registered"
+      },
+      {
+        "value": "in_review",
+        "label": "In review",
+        "meaning": "insurance or compliance fixture"
+      },
+      {
+        "value": "resolved",
+        "label": "Resolved",
+        "meaning": "verify vendor"
+      },
+      {
+        "value": "blocked",
+        "label": "Blocked",
+        "meaning": "Decision held for follow-up"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "open",
+        "to": "in_review"
+      },
+      {
+        "from": "in_review",
+        "to": "resolved",
+        "gate": "Vendor reference"
+      },
+      {
+        "from": "open",
+        "to": "blocked"
+      }
     ]
   }
 ];
