@@ -14,6 +14,8 @@
 
 The public profile has an engineering-first README, two working portfolio badges, a visual-portfolio section, and an explicit description of the private 50-product workflow program. The profile intentionally does not claim public customer usage, commercial deployment, regulatory certification, or inaccessible private-repository popularity.
 
+The active header is an original illustrated portrait banner at **assets/abdul-engineering-banner-blue-violet.png**. It has been visually checked after publication and includes the exact introduction: **ABDUL WASAY KHAN**, **SOFTWARE ENGINEER**, and **Building secure workflow systems, developer tooling & operational software**. Its brushwork and accents use electric blue and deep violet; the prior green-and-orange version was removed.
+
 ## Enable the visual hub
 
 In the **wasayb/wasayb** repository, open **Settings → Pages**, choose **Deploy from a branch**, select **main**, choose **/(root)**, then save. GitHub Pages should publish the root `index.html` at the target URL above. The hub calls the public GitHub REST API in the browser, so its repository and follower signal reflects current public data.
