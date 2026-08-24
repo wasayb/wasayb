@@ -4,6 +4,10 @@
 
 I focus on the unglamorous but consequential parts of software: making work traceable, validating decisions at the boundary, preserving evidence, and turning ambiguous handoffs into dependable systems.
 
+## Visual portfolio
+
+The high-contrast systems portfolio hub is included in this repository and is ready for GitHub Pages at **https://wasayb.github.io/wasayb/** once Pages is enabled from the `main` branch. It uses live public GitHub API data for public repository and follower signals, and it deliberately does not fabricate popularity, customer, or deployment metrics for private work.
+
 ## Current build program
 
 I am developing a private, GitHub-first portfolio of **50 local-first workflow applications** alongside **ShipPulse**, a release-intelligence MVP. The portfolio is intentionally private while its workflows, security boundaries, and product handovers are being validated.

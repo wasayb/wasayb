@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Abdul Wasay Khan — software engineering portfolio hub." />
+    <title>AW / Systems Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <main class="layout">
+      <aside class="identity-rail">
+        <div class="mark" aria-label="Abdul Wasay Khan monogram">AW</div>
+        <p class="rail-kicker">ENGINEERING PORTFOLIO / 2026</p>
+        <h1>Abdul<br />Wasay Khan</h1>
+        <p class="handle">@wasayb</p>
+        <p class="identity-copy">Software engineer creating evidence-led workflow systems, developer tools, and operational software.</p>
+        <a class="profile-link" href="https://github.com/wasayb" target="_blank" rel="noreferrer">Open GitHub profile <span>↗</span></a>
+        <div class="rail-status"><span class="status-dot"></span> PRIVATE BUILD PROGRAM ACTIVE</div>
+        <div class="rail-bottom">
+          <span>LOCAL-FIRST</span>
+          <span>SECURE BY DEFAULT</span>
+          <span>NO VANITY METRICS</span>
+        </div>
+      </aside>
+
+      <section class="main-stage">
+        <header class="hero-panel panel">
+          <div>
+            <p class="eyebrow">SYSTEMS / DELIVERY / OPERATIONS</p>
+            <h2>Builds that make<br /><em>work accountable.</em></h2>
+          </div>
+          <p class="hero-copy">A public window into an engineering practice focused on traceability, explicit decisions, safe automation, and durable operational workflows.</p>
+        </header>
+
+        <section class="metric-grid" aria-label="Portfolio signals">
+          <article class="metric-card panel live-card">
+            <p>PUBLIC REPOSITORIES</p>
+            <strong id="repo-count">—</strong>
+            <small>Live GitHub signal</small>
+          </article>
+          <article class="metric-card panel live-card">
+            <p>PUBLIC FOLLOWERS</p>
+            <strong id="follower-count">—</strong>
+            <small>Live GitHub signal</small>
+          </article>
+          <article class="metric-card panel private-card">
+            <p>PRIVATE WORKFLOWS</p>
+            <strong>50</strong>
+            <small>Portfolio implementation program</small>
+          </article>
+          <article class="metric-card panel private-card">
+            <p>FLAGSHIP MVP</p>
+            <strong>01</strong>
+            <small>ShipPulse / release intelligence</small>
+          </article>
+        </section>
+
+        <section class="build-map panel">
+          <div class="section-head">
+            <div><p class="eyebrow">CURRENT BUILD MAP</p><h3>Systems that turn ambiguity into a verifiable record.</h3></div>
+            <span class="map-key"><i></i> private / validated locally</span>
+          </div>
+          <div class="map-grid">
+            <article class="map-card tone-orange"><span class="map-index">01</span><h4>ShipPulse</h4><p>Release intelligence with source-grounded review, durable processing, and explicit approval.</p><span class="card-tag">DEVELOPER SYSTEMS</span></article>
+            <article class="map-card tone-lime"><span class="map-index">02</span><h4>Workflow Core</h4><p>Authentication, server validation, audit trails, persisted domain fields, and evidence-gated closure.</p><span class="card-tag">SECURE FOUNDATIONS</span></article>
+            <article class="map-card tone-blue"><span class="map-index">03</span><h4>Operations Suite</h4><p>Fifty local-first workflow concepts spanning data, support, field, finance, compliance, and IT operations.</p><span class="card-tag">VENTURE STUDIO</span></article>
+          </div>
+        </section>
+
+        <section class="signal-grid">
+          <article class="panel operating-system">
+            <p class="eyebrow">OPERATING PRINCIPLES</p>
+            <ol>
+              <li><span>01</span><div><b>Source before summary</b><p>Keep the evidence and ownership behind a decision visible.</p></div></li>
+              <li><span>02</span><div><b>Bounded automation</b><p>Automate structured work while keeping high-impact decisions reviewable.</p></div></li>
+              <li><span>03</span><div><b>Safe activation</b><p>Start local, document the boundary, then activate external systems deliberately.</p></div></li>
+            </ol>
+          </article>
+          <article class="panel workbench">
+            <p class="eyebrow">WORKBENCH</p>
+            <div class="skills" aria-label="Core technologies"><span>TypeScript</span><span>Node.js</span><span>React</span><span>SQLite</span><span>PostgreSQL</span><span>GitHub</span><span>APIs</span><span>Security</span></div>
+            <div class="workbench-note"><span class="pulse"></span><p>Live data updates from the public GitHub API. Private work is represented as a program, not as public popularity.</p></div>
+          </article>
+        </section>
+
+        <section class="repository-panel panel">
+          <div class="section-head">
+            <div><p class="eyebrow">PUBLIC REPOSITORY INDEX</p><h3>Open-source and published work.</h3></div>
+            <a href="https://github.com/wasayb?tab=repositories" target="_blank" rel="noreferrer">View all public repositories ↗</a>
+          </div>
+          <div id="repo-list" class="repo-list" aria-live="polite"><p class="loading">Loading public repository index…</p></div>
+        </section>
+
+        <footer class="page-footer">
+          <span>AW / SYSTEMS PORTFOLIO</span>
+          <span id="updated-at">PUBLIC SIGNAL / SYNCING</span>
+        </footer>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
