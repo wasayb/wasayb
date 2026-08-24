@@ -4,10 +4,7 @@
 
 I focus on the unglamorous but consequential parts of software: making work traceable, validating decisions at the boundary, preserving evidence, and turning ambiguous handoffs into dependable systems.
 
-<p align="center">
-  <img height="172" src="https://github-readme-stats.vercel.app/api?username=wasayb&show_icons=true&theme=transparent&hide_border=true&title_color=c7ff34&icon_color=ff7a3d&text_color=d5ddd7&ring_color=c7ff34" alt="@wasayb public GitHub activity summary" />
-  <img height="172" src="https://github-readme-stats.vercel.app/api/top-langs/?username=wasayb&layout=compact&theme=transparent&hide_border=true&title_color=c7ff34&text_color=d5ddd7" alt="@wasayb public repository language summary" />
-</p>
+> **Building now:** ShipPulse release intelligence, a secure local Workflow Core, and a private 50-product operational-software portfolio.
 
 <p align="center">
   <img src="https://img.shields.io/badge/PRIVATE%20WORKFLOW%20PROGRAM-50%20LOCAL--FIRST%20BUILDS-c7ff34?style=for-the-badge&labelColor=111411" alt="50 local-first workflow builds" />
