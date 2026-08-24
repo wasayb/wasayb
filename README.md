@@ -23,6 +23,7 @@ I build products that make consequential work easier to verify: release intellig
 | **ShipPulse** | An engineering-first release-intelligence MVP with source-grounded review, durable processing, and explicit approval. |
 | **Workflow Core** | A reusable local foundation with server-side validation, authenticated owner access, audit records, and evidence-gated closure. |
 | **50-product studio** | A private portfolio of local-first operational workflow applications with product-specific field models. |
+| **AgentLedger** | A proprietary AI-agent change-control product with accountable ownership, approval evidence, and auditability. |
 
 ## Technology field
 
@@ -37,6 +38,7 @@ I build products that make consequential work easier to verify: release intellig
 | **ShipPulse** | Repository events → source-linked release review → approved operational record | Private MVP during validation |
 | **Workflow Core** | Local operational workflow foundation with auth, persistence, validation, and audit history | Private implementation foundation |
 | **Operations Suite** | 50 distinct local workflow modules across data, support, field, finance, healthcare, and IT operations | Private build program |
+| **AgentLedger** | AI-agent action control: owner, risk tier, allowed scope, evidence, and audit trail | Proprietary source · [public product brief](./agentledger/index.html) |
 
 The work above is not represented as commercial deployment, live customer usage, regulatory certification, or a publicly accessible private-repository portfolio.
 
