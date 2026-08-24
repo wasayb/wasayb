@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A source-safe visual index of 50 local workflow products and the proprietary AgentLedger flagship." />
+    <title>AW / 51 Product Visual Index</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="products.css" />
+  </head>
+  <body>
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+    <main class="catalog-shell">
+      <header class="catalog-nav">
+        <a class="catalog-brand" href="index.html"><span>AW</span> SYSTEMS PORTFOLIO</a>
+        <span>VISUAL PRODUCT INDEX / 01—51</span>
+      </header>
+
+      <section class="catalog-hero">
+        <div>
+          <p class="eyebrow">PRIVATE BUILD PROGRAM / PUBLIC VISUAL REVIEW</p>
+          <h1>See the workflows.<br /><em>Not the private source.</em></h1>
+        </div>
+        <div class="hero-note">
+          <p>Every card opens a source-safe visual workflow preview: the control points, the product-specific recorded fields, and the evidence boundary.</p>
+          <p class="boundary-note">50 products are independently runnable local workflow applications. AgentLedger is a proprietary local-first flagship. No card is a claim of public SaaS deployment or live customer integration.</p>
+        </div>
+      </section>
+
+      <section class="catalog-controls" aria-label="Product gallery controls">
+        <label class="search-box"><span>⌕</span><input id="catalog-search" type="search" placeholder="Search product or workflow lane" autocomplete="off" /></label>
+        <div id="lane-filters" class="lane-filters" aria-label="Filter by workflow lane"></div>
+        <p id="catalog-count" class="catalog-count" aria-live="polite"></p>
+      </section>
+
+      <section id="product-grid" class="product-grid" aria-live="polite"></section>
+
+      <section class="catalog-boundary">
+        <p class="eyebrow">ACTIVATION BOUNDARY</p>
+        <p>These are visual previews of validated local workflow products. External systems, credentials, customer data, and production deployment are intentionally not included in this public portfolio.</p>
+      </section>
+    </main>
+
+    <dialog id="product-dialog" class="product-dialog" aria-labelledby="dialog-title">
+      <article class="dialog-frame">
+        <button id="close-dialog" class="close-dialog" type="button" aria-label="Close product detail">×</button>
+        <div id="dialog-content"></div>
+      </article>
+    </dialog>
+    <script src="products-data.js"></script>
+    <script src="products.js"></script>
+  </body>
+</html>
