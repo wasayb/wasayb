@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/profile-header.png" alt="Abstract systems map in chartreuse, orange, and graphite" width="100%" />
+  <img src="./assets/abdul-engineering-banner.png" alt="Illustrated engineering portrait of Abdul Wasay Khan" width="100%" />
 </p>
 
 <h1 align="center">Abdul Wasay Khan</h1>
