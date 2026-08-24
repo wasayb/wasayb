@@ -1,45 +1,62 @@
-# Abdul Wasay Khan
-
-**Software engineer building secure workflow systems, developer tooling, and operational software.**
-
-I focus on the unglamorous but consequential parts of software: making work traceable, validating decisions at the boundary, preserving evidence, and turning ambiguous handoffs into dependable systems.
-
-> **Building now:** ShipPulse release intelligence, a secure local Workflow Core, and a private 50-product operational-software portfolio.
-
 <p align="center">
-  <img src="https://img.shields.io/badge/PRIVATE%20WORKFLOW%20PROGRAM-50%20LOCAL--FIRST%20BUILDS-c7ff34?style=for-the-badge&labelColor=111411" alt="50 local-first workflow builds" />
-  <img src="https://img.shields.io/badge/FLAGSHIP%20MVP-SHIPPULSE-ff7a3d?style=for-the-badge&labelColor=111411" alt="ShipPulse flagship MVP" />
+  <img src="./assets/profile-header.png" alt="Abstract systems map in chartreuse, orange, and graphite" width="100%" />
 </p>
 
-## Visual portfolio
+<h1 align="center">Abdul Wasay Khan</h1>
 
-The high-contrast systems portfolio hub is included in this repository and is ready for GitHub Pages at **https://wasayb.github.io/wasayb/** once Pages is enabled from the `main` branch. It uses live public GitHub API data for public repository and follower signals, and it deliberately does not fabricate popularity, customer, or deployment metrics for private work.
+<p align="center"><strong>Software engineer building secure workflow systems, developer tooling, and operational software.</strong></p>
 
-## Current build program
+<p align="center">
+  <img src="https://img.shields.io/badge/BUILDING-SHIP_PULSE-ff7a3d?style=for-the-badge&labelColor=111411" alt="Building ShipPulse" />
+  <img src="https://img.shields.io/badge/PRIVATE_PROGRAM-50_LOCAL--FIRST_WORKFLOWS-c7ff34?style=for-the-badge&labelColor=111411" alt="50 local-first workflows" />
+  <img src="https://img.shields.io/badge/FOCUS-SECURE_OPERATIONAL_SOFTWARE-6bb3ff?style=for-the-badge&labelColor=111411" alt="Secure operational software" />
+</p>
 
-I am developing a private, GitHub-first portfolio of **50 local-first workflow applications** alongside **ShipPulse**, a release-intelligence MVP. The portfolio is intentionally private while its workflows, security boundaries, and product handovers are being validated.
+---
 
-| Focus | What I build |
+## Hey, welcome to the systems index.
+
+I build products that make consequential work easier to verify: release intelligence, evidence-led handoffs, operational remediation, and workflow systems with clear ownership. My current work is a GitHub-first private build program, designed locally before any external activation.
+
+| Current signal | What it means |
 |---|---|
-| Developer systems | Release intelligence, source-linked change review, retry-safe workflows, and implementation briefs. |
-| Operations software | Evidence queues, reconciliation, handoffs, approvals, exceptions, and accountable closeout. |
-| Secure product foundations | Server-side validation, session protection, CSRF controls, authorization checks, audit records, and local-first persistence. |
-| Delivery discipline | Explicit activation boundaries, synthetic fixtures for sensitive domains, reproducible tests, and technical handovers. |
+| **ShipPulse** | An engineering-first release-intelligence MVP with source-grounded review, durable processing, and explicit approval. |
+| **Workflow Core** | A reusable local foundation with server-side validation, authenticated owner access, audit records, and evidence-gated closure. |
+| **50-product studio** | A private portfolio of local-first operational workflow applications with product-specific field models. |
 
-## Selected work
+## Technology field
 
-### ShipPulse — release intelligence
+`TypeScript` · `Node.js` · `React` · `SQLite` · `PostgreSQL` · `GitHub` · `APIs` · `Secure workflow design`
 
-ShipPulse is an engineering-first workspace for turning repository events into reviewable, source-grounded release intelligence. Its MVP architecture includes durable job handling, idempotent webhook boundaries, retry-aware processing, approval flows, integration health, and auditability. The repository is private during validation.
+> I prefer narrow, inspectable products over broad feature claims: preserve the source, make the decision visible, validate at the boundary, and record the outcome.
 
-### Workflow Core — local operational software foundation
+## Selected systems
 
-The portfolio applications share a local-first workflow foundation designed for safe evaluation before external activation. It provides authenticated owner access, SQLite persistence, explicit source references, product-specific required fields, evidence-gated closure conditions, and audit history.
+| System | Focus | Current availability |
+|---|---|---|
+| **ShipPulse** | Repository events → source-linked release review → approved operational record | Private MVP during validation |
+| **Workflow Core** | Local operational workflow foundation with auth, persistence, validation, and audit history | Private implementation foundation |
+| **Operations Suite** | 50 distinct local workflow modules across data, support, field, finance, healthcare, and IT operations | Private build program |
 
-> The current work is a verified local implementation program. It is not represented as a collection of public commercial deployments, live customer integrations, or completed compliance programs.
+The work above is not represented as commercial deployment, live customer usage, regulatory certification, or a publicly accessible private-repository portfolio.
 
-## Engineering approach
+## Public repository shelf
 
-I prefer narrow, inspectable products over broad feature claims. Each workflow starts with a primary operational record, clear ownership, server-enforced state changes, evidence needed for resolution, and documented constraints for production activation.
+| Repository | Published focus |
+|---|---|
+| [MaxedDigital.services](https://github.com/wasayb/MaxedDigital.services) | Public software and digital-agency website source |
+| [ADGP](https://github.com/wasayb/ADGP) | Public industrial B2B website source |
+| [VORTEK-SMMA](https://github.com/wasayb/VORTEK-SMMA) | Public digital-agency website source |
+| [Cold-dm-Generation-](https://github.com/wasayb/Cold-dm-Generation-) | Public outreach-workflow repository |
 
-For collaboration, technical discussions, or a private portfolio walkthrough, please contact me through GitHub.
+## Visual portfolio hub
+
+The visual portfolio source lives in this repository. Once GitHub Pages is enabled from the `main` branch using the `/(root)` directory, it will be available at:
+
+**https://wasayb.github.io/wasayb/**
+
+The hub uses public GitHub data at runtime and keeps private build-program signals clearly separate from public metrics.
+
+---
+
+<p align="center">For technical discussion, private portfolio walkthroughs, or collaboration, connect through <a href="https://github.com/wasayb">@wasayb</a>.</p>
