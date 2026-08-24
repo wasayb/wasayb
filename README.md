@@ -7,9 +7,9 @@
 <p align="center"><strong>Software engineer building secure workflow systems, developer tooling, and operational software.</strong></p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/BUILDING-SHIP_PULSE-ff7a3d?style=for-the-badge&labelColor=111411" alt="Building ShipPulse" />
-  <img src="https://img.shields.io/badge/PRIVATE_PROGRAM-50_LOCAL--FIRST_WORKFLOWS-c7ff34?style=for-the-badge&labelColor=111411" alt="50 local-first workflows" />
-  <img src="https://img.shields.io/badge/FOCUS-SECURE_OPERATIONAL_SOFTWARE-6bb3ff?style=for-the-badge&labelColor=111411" alt="Secure operational software" />
+  <img src="https://img.shields.io/badge/BUILDING-SHIP_PULSE-7288ff?style=for-the-badge&labelColor=0a0b16" alt="Building ShipPulse" />
+  <img src="https://img.shields.io/badge/PRIVATE_PROGRAM-50_LOCAL--FIRST_WORKFLOWS-ab95ff?style=for-the-badge&labelColor=0a0b16" alt="50 local-first workflows" />
+  <img src="https://img.shields.io/badge/FOCUS-SECURE_OPERATIONAL_SOFTWARE-76b9ff?style=for-the-badge&labelColor=0a0b16" alt="Secure operational software" />
 </p>
 
 ---

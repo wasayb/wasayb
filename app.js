@@ -13,7 +13,6 @@ async function loadProfile() {
   const profile = await profileResponse.json();
   const repositories = await repositoryResponse.json();
   document.getElementById('repo-count').textContent = number(profile.public_repos);
-  document.getElementById('follower-count').textContent = number(profile.followers);
   document.getElementById('updated-at').textContent = `PUBLIC SIGNAL / ${new Date().toLocaleDateString(undefined, { month: 'short', year: 'numeric' }).toUpperCase()}`;
   renderRepositories(repositories);
 }
