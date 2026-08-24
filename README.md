@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/abdul-engineering-banner-intro.png" alt="Illustrated engineering portrait of Abdul Wasay Khan with professional introduction" width="100%" />
+  <img src="./assets/abdul-engineering-banner-blue-violet.png" alt="Illustrated engineering portrait of Abdul Wasay Khan with a blue and violet professional introduction banner" width="100%" />
 </p>
 
 <h1 align="center">Abdul Wasay Khan</h1>
